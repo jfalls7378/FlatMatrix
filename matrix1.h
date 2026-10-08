@@ -24,7 +24,12 @@ public:
     // Constructor
     // TODO: Constructor with third optional parameter.
     //       Use an initialization list.
-    Matrix1
+    Matrix1<T>::Matrix1(size_t rows, size_t cols, const T& initialVal = T()) : 
+        rows(rows), cols(cols), data(rows * cols, initalVal){
+        if (rows == 0 || cols == 0) {
+            throw std::invalid_argument("Matrix dimensions must be greater than zero.");
+        }
+    }
 
     // Getters
     size_t rows() const { return m_rows; }
