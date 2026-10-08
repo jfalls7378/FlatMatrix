@@ -20,10 +20,18 @@ read-only references (const Matrix<T>&).
 int main() {
     try {
         // TODO: Initialize a 2x3 matrix with different initial values
-
+        
 
         // TODO: Create a 2x3 matrix: 1,2,3 (row1) and 4,5,6 (row2).
-        Matrix1<int> mat1 ...
+        Matrix1<int> mat1(2,3);
+        int val = 1;
+        for (size_t r = 0; r < 2; ++r){
+            for(size_t c = 0, c < 3; ++c){
+                mat1(r,c) = val++
+            }
+        }
+        return 0;
+        
 
         // TODO: Create a second matrix. It may have any values you choose
         //       and should be configured so that matrix multiplication may
